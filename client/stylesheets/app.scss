@@ -1,0 +1,27 @@
+$loading-font-size: 22px;
+
+@import '../../.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
+@import '../../.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
+
+.contact-detail {
+  background: $stable;
+}
+
+.item-divider-with-toggle {
+	/* .item-divider has less padding as .item-toggle requires */
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+.events .item-checkbox .checkbox {
+	/* Otherwise they fill the whole list-item as a clickable area */
+	width: 42px;
+}
+
+.featurette .item {
+	text-align: center;
+}
+.featurette .item i {
+	font-size: 3em;
+	display: block;
+}

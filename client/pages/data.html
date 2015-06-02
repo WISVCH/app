@@ -1,0 +1,130 @@
+<template name="page-data">
+{{#contentFor "headerTitle"}}
+  {{#if isDirty}}
+  <button class="button button-clear">Cancel</button>
+  {{/if}}
+  <h1 class="title">{{> ionIcon icon="person"}} Personal data</h1>
+  <button class="button button-clear">Save</button>
+{{/contentFor}}
+
+{{#ionView}}
+  {{#ionContent}}
+  <div class="list">
+    <div class="item item-divider">Contact Details</div>
+
+    <label class="item item-input item-icon-right">
+      <input type="text" value="John Doe">
+      {{> ionIcon icon="ios-arrow-forward"}}
+      <div style="display:none">
+        <label class="item item-input">
+          <input type="text" placeholder="Formatted Name">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Prefix Titles">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Initials">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="First Name">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Preposition (eg. van/de/der)">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Last Name">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Postfix Titles">
+        </label>
+      </div>
+    </label>
+    <label class="item item-input">
+      <input type="email" placeholder="E-mail">
+    </label>
+    <label class="item item-input">
+      <input type="tel" placeholder="Mobile Phone">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">In case of emergency</span>
+      <input type="tel" placeholder="Parents Phone number">
+    </label>
+    <label class="item item-input item-icon-right">
+      <input type="text" placeholder="Address, Postcode, City, Country">
+      {{> ionIcon icon="ios-arrow-forward"}}
+    </label>
+    <div style="display:none">
+    <label class="item item-input">
+      <input type="text" placeholder="City">
+    </label>
+    <label class="item item-input">
+      <input type="text" placeholder="Postcode">
+    </label>
+    <label class="item item-input">
+      <input type="text" placeholder="Country">
+    </label>
+    </div>
+    <div class="item item-toggle">
+      Receive MaCHazine
+      <label class="toggle toggle-balanced">
+        <input type="checkbox"><div class="track"><div class="handle"></div></div>
+      </label>
+    </div>
+
+    <div class="item item-divider">Personalia</div>
+    <label class="item item-input">
+      <span class="input-label">Birth date</span>
+      <input type="date">
+    </label>
+    <label class="item item-input item-select">
+      <div class="input-label">Gender</div>
+      <select>
+        <option selected>Male</option>
+        <option>Female</option>
+        <option>It's Complicated</option>
+      </select>
+    </label>
+    <p class="padding">Are you living together with other CH members? Let us know (if you want to receive only a single MaCHazine) at <a href="mailto:bestuur@ch.tudelft.nl">bestuur@ch.tudelft.nl</a>.</p>
+
+    <div class="item item-divider item-toggle item-input item-divider-with-toggle">
+      Student
+      <label class="toggle toggle-balanced">
+        <input type="checkbox"><div class="track"><div class="handle"></div></div>
+      </label>
+    </div>
+    <label class="item item-input">
+      <span class="input-label">Student number</span>
+      <input type="number">
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Current Study</span>
+      <input type="text">
+    </label>
+    <label class="item item-input">
+      <span class="input-label">First Year</span>
+      <input type="number" placeholder="of first study">
+    </label>
+    <div class="item item-toggle">
+      Graduated
+      <label class="toggle toggle-balanced">
+        <input type="checkbox"><div class="track"><div class="handle"></div></div>
+      </label>
+    </div>
+    <div class="item item-toggle">
+      Yearbook entry permission
+      <label class="toggle toggle-balanced">
+        <input type="checkbox"><div class="track"><div class="handle"></div></div>
+      </label>
+    </div>
+
+    <div class="item item-divider item-toggle item-input item-divider-with-toggle">
+      Alumnus
+      <label class="toggle toggle-balanced">
+        <input type="checkbox"><div class="track"><div class="handle"></div></div>
+      </label>
+    </div>
+    <p class="padding">If you became a alumnus recently, or if you want to publish your thesis in the MaCHazine: please drop an email to <a href="mailto:bestuur@ch.tudelft.nl">bestuur@ch.tudelft.nl</a> to let us know. We would love to hear where you graduated (professor, thesis subject, company, etc.).</p>
+  </div>
+  {{/ionContent}}
+{{/ionView}}
+</template>

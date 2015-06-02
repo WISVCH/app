@@ -1,0 +1,35 @@
+<template name="page-events">
+{{#contentFor "headerTitle"}}
+  <h1 class="title">{{> ionIcon icon="calendar"}} Events</h1>
+{{/contentFor}}
+
+{{#ionView}}
+  {{#ionContent}}
+  	<div class="list events">
+  		<div class="item item-divider">June</div>
+  		<div class="item item-checkbox item-thumbnail-right">
+	  		<img src="" style="width:100px; height: 100px; background: green" />
+			<label class="checkbox"><input type="checkbox" checked></label> Lunchlezing prof. Aarts
+  			<p>June 2, 12.45-13.30, room Data</p>
+	  	</div>
+  		<div class="item item-checkbox">
+  			<label class="checkbox"><input type="checkbox"></label> Lunchlezing Bedrijf X
+  			<p>June 9, 12.45-13.30, room Data</p>
+  		</div>
+  		<div class="item item-checkbox item-thumbnail-right">
+	  		<img src="" style="width:100px; height: 100px; background: blue" />
+  			<label class="checkbox"><input type="checkbox"></label> Lunchlezing Cees Witteveen
+  			<p>June 16, 12.45-13.30, room Data</p>
+  		</div>
+
+  		<div class="item item-divider">July</div>
+
+  		<div class="item item-divider">August</div>
+  		<div class="item item-checkbox">
+  			<label class="checkbox"><input type="checkbox" checked></label> EJW
+  			<p>3 dagen</p>
+  		</div>
+	</div>
+  {{/ionContent}}
+{{/ionView}}
+</template>

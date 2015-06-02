@@ -1,0 +1,64 @@
+<template name="layout">
+  {{#contentFor "headerButtonLeft"}}
+    <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+      {{#if isAndroid}}
+        {{> ionIcon icon='android-more-vertical'}}
+      {{else}}
+        {{> ionIcon icon='navicon'}}
+      {{/if}}
+    </button>
+  {{/contentFor}}
+
+  {{#ionBody}}
+
+  	{{#ionSideMenuContainer}}
+
+      {{#ionSideMenus}}
+
+        {{#ionSideMenu}}
+          <div class="bar bar-header bar-dark">
+            <h1 class="title">Menu</h1>
+          </div>
+          <div class="content has-header">
+            <div class="list">
+              <a class="item item-icon-left" href="/" data-ion-menu-close>
+                Home {{> ionIcon icon="home"}}
+              </a>
+              <a class="item item-icon-left" href="/data" data-ion-menu-close data-nav-direction="swap">
+                {{> ionIcon icon="person"}}
+                My Data
+              </a>
+              <a class="item item-icon-left" href="/events" data-ion-menu-close data-nav-direction="swap">
+              	Events {{> ionIcon icon="calendar"}}
+              </a>
+              <a class="item item-icon-left" href="/choice" data-ion-menu-close data-nav-direction="swap">
+              	CHoice {{> ionIcon icon="university"}}
+              </a>
+              <a class="item item-icon-left" href="/pub" data-ion-menu-close data-nav-direction="swap">
+              	/PUB {{> ionIcon icon="beer"}}
+              </a>
+              <a class="item item-icon-left" href="/settings" data-ion-menu-close data-nav-direction="swap">
+                Settings {{> ionIcon icon="levels"}}
+              </a>
+              <a class="item item-icon-left" href="https://github.com/WISVCH">
+              	Contribute {{> ionIcon icon="social-github"}}
+              </a>
+            </div>
+          </div>
+        {{/ionSideMenu}}
+
+      {{/ionSideMenus}}
+
+      {{#ionSideMenuContent}}
+
+        {{> ionNavBar class="bar-positive"}}
+
+        {{#ionNavView}}
+          {{> yield}}
+        {{/ionNavView}}
+
+      {{/ionSideMenuContent}}
+
+    {{/ionSideMenuContainer}}
+  {{/ionBody}}
+</template>

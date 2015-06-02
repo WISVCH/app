@@ -1,0 +1,53 @@
+<template name="hello">
+{{#contentFor "headerTitle"}}
+  <h1 class="title">@WISVCH</h1>
+{{/contentFor}}
+
+{{#ionView}}
+  {{#ionContent}}
+  	<div class="padding featurette">
+      <p>Several features are available in app, others are provided via in-app webviews.</p>
+	  	<div class="row">
+        <a class="col item" href="/data" data-ion-menu-close data-nav-direction="swap">
+          {{> ionIcon icon="person"}}
+          My Data
+        </a>
+        <a class="col item" href="/events" data-ion-menu-close data-nav-direction="swap">
+          {{> ionIcon icon="calendar"}}
+          Events
+        </a>
+      </div>
+      <div class="row">
+        <a class="col item" href="//ch.tudelft.nl/choice" data-ion-menu-close data-nav-direction="swap">
+          {{> ionIcon icon="university"}}
+          CHoice
+        </a>
+        <a class="col item" href="//pub.etv.tudelft.nl/" data-ion-menu-close data-nav-direction="swap">
+          {{> ionIcon icon="beer"}}
+          /PUB
+        </a>
+      </div>
+      <div class="row">
+        <a class="col item" href="//ch.tudelft.nl/files" data-ion-menu-close data-nav-direction="swap">
+          {{> ionIcon icon="ios-folder"}}
+          Files
+        </a>
+        <a class="col item" href="//ch.tudelft.nl/wiki" data-ion-menu-close data-nav-direction="swap">
+          {{> ionIcon icon="help-buoy"}}
+          Wiki
+        </a>
+      </div>
+      <div class="row">
+        <a class="col item" href="/settings" data-ion-menu-close data-nav-direction="swap">
+          {{> ionIcon icon="levels"}}
+          Settings
+        </a>
+        <a class="col item" href="https://github.com/WISVCH">
+          {{> ionIcon icon="social-github"}}
+          Contribute
+        </a>
+		</div>
+	</div>
+  {{/ionContent}}
+{{/ionView}}
+</template>
